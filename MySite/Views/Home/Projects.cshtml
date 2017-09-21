@@ -1,0 +1,184 @@
+﻿@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="projects" class="sub-content" onload="doit()">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                Due to certain stipulations of my current employment, I'm unable to post source code for Beaverton School District apps. 
+                If you're interested in seeing code from one of these projects, we can set up a private walk-through. 
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/SocialWorkHandHeart.png');">
+                        <input type="hidden" value="sw" />
+                        <div class="icon-title radius well">
+                            <h4>Social Work</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/hr_icon.png');background-position:0 50%;">
+                        <input type="hidden" value="hrc" />
+                        <div class="icon-title radius well">
+                            <h4>HR Center</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/portrait.jpg');">
+                        <input type="hidden" value="dp" />
+                        <div class="icon-title radius well">
+                            <h4>District Photos</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/helping_hand.png');">
+                        <input type="hidden" value="ss" />
+                        <div class="icon-title radius well">
+                            <h4>Suicide Screening</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/group.png');" >
+                        <input type="hidden" value="gm" />
+                        <div class="icon-title radius well">
+                            <h4>Group Manager</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/house.png');background-position:0 50%;">
+                        <input type="hidden" value="hr" />
+                        <div class="icon-title radius well">
+                            <h4>Homeless Referral</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/folder_icon.png');">
+                        <input type="hidden" value="fb" />
+                        <div class="icon-title radius well">
+                            <h4>FileBackup</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    @*<div class="project-icon radius clickable" style="background-image: url('../Content/imgs/projects/sharepoint.png');">
+                        <input type="hidden" value="sp" />
+                        <div class="icon-title radius well">
+                            <h4>SharePoint</h4>
+                        </div>
+                    </div>*@
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-6">            
+                </div>
+                <div class="col-sm-6">            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="project-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog  radius-no-border">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header radius-no-border">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Project Info</h4>
+      </div>
+      <div class="modal-body">
+        <div id="project-dialog" >    
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 id="p-title"></h3>
+                    <hr />
+                    <h4>Role(s)</h4>    
+                    <span id="p-role"></span>
+                    <hr />
+                    <h4>Tech Used</h4>
+                    <span id="p-tech"></span>
+                    <hr />
+                    <h4>Overview</h4>
+                    <span id="p-overview"></span> 
+                    <hr /> 
+                    <div id="source-links" style="display:none;">
+                        <b>Check it out at:</b> <br />
+                        <div id="p-links"></div>
+                    </div>
+                    <div id="request-source" style="display:none;">
+                        <a href="#">Request source</a>
+                    </div>
+                </div>
+            </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="request-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog  radius-no-border">
+        <!-- Modal content-->
+        <div id="request-modal-content" class="modal-content">
+            <div id="request-block">
+                <div class="modal-header radius-no-border">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Request Source</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="request-form">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

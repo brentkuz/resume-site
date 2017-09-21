@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")    
+    @*<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>*@
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+     
+   
+</head>
+<body>
+    <div id="content-wrapper" class="container radius shadow">
+        <input id="active-tab" type="hidden" value="@ViewBag.ActiveTab" />
+        <div class="row header-row radius-no-border">
+            <div class="col-md-5 col-lg-4 header-col"><h1 class="main">BrentKuzmanich.com</h1></div>
+            <div class="col-md-5 col-lg-6 header-col">
+                <ul id="main-nav" class="nav nav-pills">
+                    <li id="home" role="presentation">@Html.ActionLink("Home", "Index")</li>
+                    <li id="about-me" role="presentation">@Html.ActionLink("About Me", "AboutMe")</li> 
+                    <li id="resume" role="presentation">
+                        <a href="@Url.Action("Resume", new { })">@Html.Raw("R&eacutesum&eacute")</a>  
+                     </li>
+                    <li id="projects" role="presentation">@Html.ActionLink("Projects", "Projects")</li>
+                </ul>
+            </div>
+            <div class="col-md-2 header-col">
+                <ul id="link-icon-list" class="horizontal-list">
+                    <li> 
+                        <a class="thumbnail" href="https://www.linkedin.com/in/brent-kuzmanich-a5b57089" title="LinkedIn">
+                            <img class="icon-img" src="~/Content/imgs/linkedin-icon-logo_36.jpg" alt="LinkedIn Icon"/>
+                        </a>
+                    </li>
+                    <li> 
+                        <a class="thumbnail" href="https://github.com/brentkuz" title="GitHub">
+                            <img class="icon-img" src="~/Content/imgs/github4_36.jpg" alt="GitHub Icon" />
+                        </a>
+                    </li>
+                    <li> 
+                        <a class="thumbnail" href="mailto:brentkuzmanich@gmail.com" title="Email Me">
+                            <img class="icon-img" src="~/Content/imgs/email_icon_36.jpg" alt="Email Icon" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/app")
+    @*<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>*@
+</body>
+</html>

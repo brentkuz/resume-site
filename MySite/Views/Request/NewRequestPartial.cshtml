@@ -1,0 +1,45 @@
+﻿@model MySite.Models.RequestPartialVM
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+@using (Ajax.BeginForm("SendRequest", "Request", new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "request-form",
+    InsertionMode = InsertionMode.Replace, OnBegin = "blockEl('#request-form', true)", OnComplete = "blockEl('#request-form', false)"
+}) ) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Project)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Project)   
+            @Html.HiddenFor(model => model.Project)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EmailAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Note)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Note, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Note)
+        </div>
+
+        <p>
+            <div class="g-recaptcha" data-sitekey="6Lf5gDEUAAAAAOcqBOKotXfl52kc8Ty_83bpyHbp"></div>
+            <input type="submit" value="Send" class="btn btn-primary" />
+            @Html.DisplayFor(model => model.Notification, new { @class = "error" })
+        </p>
+    </fieldset>
+}
+
+

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="sub-content">
+    <div class="row">
+        <div class="col-xs-12 center">
+            <h2><b>Welcome to my site!</b></h2>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <p class="pop">
+                Hello and welcome to my professional site. I put this site together in hopes of showing who I am, what I do, 
+                and what I have to offer. Whether you arrived here intentionally or by chance, I hope that you'll take a moment to look
+                around and get to know me. 
+            </p>
+        </div>
+    </div>
+    
+    @*<div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <div class="img-carousel">
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/beach.jpg" title="At the the beach"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/big girls.jpg" title="Roxi and Della"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/family 2.jpg" title="Wife and kids"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/family.jpg" title="Three generations"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/fire.jpg" title="Smores time"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/fishing.jpg" title="Fishing at Netarts bay"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/garden.jpg" title="Freshly planted garden" /></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/garden2.jpg" title="Garden is growing like crazy"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/guitars.jpg" title="My babies" /></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/new baby.jpg" title="Last one?"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/the boys.jpg" title="My brothers"/></div>
+                <div class="carousel-item"><img class="float-center" src="~/Content/imgs/carousel/special.jpg" title="Jaclyn and I (old)"/></div>
+            </div>
+
+        </div>
+    </div>*@
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.img-carousel').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            mobileFirst: true,
+            //adaptiveHeight: true,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+        });
+    });
+</script>
+
+

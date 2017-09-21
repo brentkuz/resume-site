@@ -1,0 +1,180 @@
+﻿@{
+    ViewBag.Title = "About Me";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="sub-content">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2><b>About Me</b></h2>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-md-4 col-md-push-8 col-sm-6 col-sm-push-6">
+            <img src="~/Content/imgs/me.jpg" alt="Me" style="width:100%;"  class="radius-no-border"/>
+        </div>
+        <div class="col-md-8 col-md-pull-4 col-sm-6 col-sm-pull-6">
+            <p id="about-summary" class="pop" style="margin:0;">
+                First of all, thanks for taking the time to look around. As you've probably gathered, my name is Brent Kuzmanich and I'm a 
+                software developer. So much of my life and who I am is committed to development. I currently work as a developer for Beaverton School District where I spend most
+                of my time writing web apps with technologies such as ASP.NET, AngularJS, and Bootstrap to name a few. I'm always
+                looking for better/different ways to do things, which has led me on a neverending quest to learn everything I can about my trade. 
+            </p>
+        </div>       
+    </div>
+    <div class="row">
+        <div class="col-sm-6" >
+            <h3><i>Professional</i></h3>
+            <div id="professional-accordion">
+                <h3>Overview</h3>
+                <div>
+                    <p>
+                        Generally speaking, I'm a creative problem solver. My current title is Systems Analyst. Though most of my work experience 
+                        is in the realm of application development, this is far from the extent of my skills and interests. I spend most of my free time
+                        learning technologies and studying Computer Science topics. Lately I've been working through <a href="http://algs4.cs.princeton.edu/home/" style="color:blue;">this book</a>.
+                        I also enjoy solving puzzles on <a href="https://leetcode.com/" style="color:blue;">LeetCode</a>.
+                    </p>
+                </div>
+                <h3>Key Technologies/Skills</h3>
+                <div>   
+                    <h4><b>Tech</b></h4> 
+                    <ul>
+                        <li>
+                            <b>.NET:</b>
+                            <ul>
+                                <li>ASP.NET</li>
+                                <li>.NET Framework</li>
+                                <li>C#</li>
+                                <li>Entity Framework, ADO.NET</li>                          
+                                <li>MVC, Web Forms, Web API</li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Web:</b>
+                            <ul>
+                                <li>HTML, CSS</li>
+                                <li>JavaScript, jQuery, AngularJS, KnockoutJS, Bootstrap</li>
+                                <li>IIS</li>
+                                <li>AJAX</li>
+                                <li>REST</li>
+                                <li>HTTP/HTTPS</li>        
+                                <li>JSON, XML</li>
+                                <li>Web Services</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Tools:</b>
+                            <ul>
+                                <li>Visual Studio</li>
+                                <li>SSMS, Toad</li>
+                                <li>Team Foundation Server, Git</li>
+                                <li>Visual Studio Online</li>
+                                <li>SharePoint</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Other:</b>
+                            <ul>
+                                <li>SQL/T-SQL</li>
+                                <li>PowerShell</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4><b>Skills/Knowledge</b></h4>                     
+                    <ul>
+                        <li>
+                            <b>Software:</b>
+                            <ul>
+                                <li>OOP/OOD</li>
+                                <li>N-tiered architecture</li>
+                                <li>MVC, MVVM</li>
+                                <li>Testing</li>
+                                <li>UI/UX design</li>
+                                <li>Database design</li>
+                                <li>Debugging/Optimizing</li>
+                                <li>Data Structures/Algorithms</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <b>Systems Analysis</b>
+                            <ul>
+                                <li>Requirements gathering/analysis</li>
+                                <li>Software design/specification</li>
+                                <li>Documentation development</li>
+                                <li>Business Analysis</li>
+                                <li>SDLC</li>
+                                <li>Project Mngt.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <h3>Education</h3>
+                <div>
+                    <b>Oregon Institute of Technology</b><br />
+                    Bachelor's of Science, Information Technology (Application Development)<br />
+                    2010-2014<br />
+                    GPA: 3.86<br />
+                </div>
+                <h3>Experience</h3>
+                <div>
+                    <p style="cursor:help" title="Systems Analyst in name only. I'm still a developer.">
+                        <b>Systems Analyst</b><br />
+                        Beaverton School District<br />
+                        October 2016 - Present
+                    </p>
+                    <p>
+                        <b>Programmer/Analyst</b><br />
+                        Beaverton School District<br />
+                        July 2014 - October 2016
+                    </p>
+                </div>
+                <h3>Goals</h3>
+                <div>
+                    <ul>
+                        <li>Earn a Master's degree (CS?)</li>
+                        <li>Never stop learning/stay relevant</li>
+                        <li>Branch out beyond app development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h3><i>Personal</i></h3>
+            <div id="personal-accordion"> 
+                <h3>Stats</h3>
+                <div>
+                    <table id="stats-table">
+                        <tr>
+                            <td><b>Birthday:</b></td>
+                            <td>March 19, 1987</td>
+                        </tr>
+                        <tr>
+                            <td><b>Location:</b></td>
+                            <td>Scappoose, OR</td>
+                        </tr>
+                        <tr>
+                            <td><b>Hobbies:</b></td>
+                            <td>
+                                Writing code, learning, playing guitar, listening to and composing music (mostly metal), doing anything with family,
+                                gardening, exercising
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Contact</h3>
+                <div>
+                    <ul>                        
+                        <li>brentkuzmanich@gmail.com</li>
+                        <li>(971) 285-5066</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
