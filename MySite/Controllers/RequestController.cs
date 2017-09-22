@@ -18,7 +18,7 @@ namespace MySite.Controllers
             captcha = new CaptchaService();
             email = new EmailService();
         }
-
+        [HttpGet]
         public ActionResult NewRequestForm(string project)
         {
             var model = new RequestPartialVM() { Project = project };

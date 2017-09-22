@@ -14,13 +14,7 @@ namespace MySite.Services
         private SmtpClient client;
         public EmailService()
         {
-            client = new SmtpClient();
-            client.Host = WebConfigurationManager.AppSettings["SmtpServer"];
-            client.Port = Convert.ToInt16(WebConfigurationManager.AppSettings["SmtpPort"]);
-            client.EnableSsl = true;
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential(WebConfigurationManager.AppSettings["GmailLogin"], WebConfigurationManager.AppSettings["GmailPassword"]);
+            client = new SmtpClient();        
         }
 
         public void Send(MailMessage message)

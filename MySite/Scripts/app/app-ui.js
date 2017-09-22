@@ -75,10 +75,12 @@ function bindTemplate(data) {
     
 }
 function getRequestForm(title) {
-    try {        
+    try {
+        blockEl("#project-dialog", true);
         $.get("/Request/NewRequestForm?project=" + title, function (resp) {
             $("#request-form").html(resp);
             $('#request-modal').modal();
+            blockEl("#project-dialog", false);
         });
     } catch (err) {
         console.log(err.message);
