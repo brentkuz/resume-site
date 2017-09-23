@@ -2,7 +2,9 @@
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-
+<p>
+    Fill out the form below and I'll email you a redacted version of the source code.
+</p>
 @using (Ajax.BeginForm("SendRequest", "Request", new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "request-form",
     InsertionMode = InsertionMode.Replace, OnBegin = "blockEl('#request-form', true)", OnComplete = "blockEl('#request-form', false)"
 }) ) {
