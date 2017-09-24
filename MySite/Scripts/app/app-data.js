@@ -10,10 +10,10 @@ my.projects = {
 
         overview: `
             <ul>
-                <li>Developed a web app to work with the district's Group Security/Single Sign-on system, to allow power users to manage groups and create automation rules.</li>
+                <li>Developed a web app to work with the district's group security/single sign-on system, to allow power users to manage groups and create automation rules.</li>
                 <li>Constructed the app in 3 tiers: a KnockoutJS client app, an MVC server app, and a Sql Server database.</li>
                 <li>Utilized multithreading to optimize a slow process resulting in a speed-up from ~7 sec to ~500 ms.</li>
-                <li>Created a recursive JavaScript Navigation Tree widget, constructed using a spinoff of the abstract factory pattern.</li>
+                <li>Created a recursive JavaScript Navigation Tree widget.</li>
             </ul>
         `,        
 
@@ -54,7 +54,7 @@ my.projects = {
 
         overview: `
             <ul>
-                <li>Developed a system, focused on process improvement, to streamline storage, vlaidation, and distribution of staff and student photos to various systems and consumers.</li>
+                <li>Developed a system, focused on process improvement, to streamline storage, validation, and distribution of staff and student photos to various systems and consumers.</li>
                 <li>Utilized modular PowerShell</li>
                 <li>Leveraged Task Scheduler for automation</li>
                 <li>Currently processed over 60k photos</li>
@@ -77,7 +77,7 @@ my.projects = {
         overview: `
             <ul>
                 <li>Took over development on a failed third-party software endeavor.</li>
-                <li>Implemented Full-text Indexing at the database and a DbContext Command Interceptor to replace Sql "LIKE" statements with "CONTAINS" to utilize indexing. One piece of functionality went from taking >30 sec to ~3 sec.</li>
+                <li>Implemented Full-text Indexing at the database and a DbContext Command Interceptor to replace Sql "LIKE" statements with "CONTAINS" to utilize indexing. One piece of functionality went from taking >35 sec to ~1.5 sec.</li>
                 <li>Fixed a notoriously unreliable email scraper service (Windows Service) to gracefully dispose and re-initialize it's core Exchange Web Service components when external dependencies fail.</li>
                 <li>Fixed >50 bugs created by the original developers.</li>
                 <li>Found and fixed a major security vulnerability (missing HTTPS binding) on the IIS server.</li>
@@ -122,7 +122,7 @@ my.projects = {
 
         overview: `
             <ul>
-                <li>Developing a web app for district Social Workers to manage and track cases for students dealing with suicial ideation.</li>
+                <li>Developing a web app for district Social Workers to manage and track cases for students dealing with suicidal ideation.</li>
                 <li>Utilizing server-side rendering for a change, relying heavily on ASP.NET @Html and @Ajax helpers.</li>
                 <li>Extensive use of Bootstrap</li>
                 <li>Utilizing Code-First Entity Framework w/ migrations.</li>                
@@ -144,7 +144,7 @@ my.projects = {
         overview: `
             <ul>
                 <li>Developing a portable solution for backing up files not under typical source control. This ranges from PowerShell scripts on a process server being checked-in to TFS to files on my desktop being mirrored to an external drive.</li>
-                <li>Decoupled and polymorphic design allowing for easy configuration of different repositories (e.g. file system, database, etc.)</li>
+                <li>Decoupled and polymorphic design allowing for easy configuration of different repositories (e.g. file system, database, source control, etc.)</li>
                 <li>Utilizing Observer pattern to watch target files configured at runtime.</li>
             </ul>
         `,

@@ -53,5 +53,12 @@ namespace MySite.Controllers
             }
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            email.Dispose();
+            captcha.Dispose();
+            base.Dispose(disposing);
+        }
+
     }
 }

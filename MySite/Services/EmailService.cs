@@ -33,7 +33,8 @@ namespace MySite.Services
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
     }

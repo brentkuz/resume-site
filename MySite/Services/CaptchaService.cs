@@ -11,42 +11,60 @@ using System.Web.Configuration;
 
 namespace MySite.Services
 {
-    public class CaptchaService
+    public class CaptchaService : IDisposable
     {
+        private bool disposed = false;
+        private HttpClient http;
         private string secretKey;
         private string url;
         public CaptchaService()
         {
+            http = new HttpClient();
             secretKey = WebConfigurationManager.AppSettings["CaptchaSecretKey"].ToString();
             url = WebConfigurationManager.AppSettings["CaptchaUrl"].ToString();
         }
+
         public async Task<bool> IsValid(string captchaResponse)
         {
             try
             {
-                using (var http = new HttpClient())
-                {
-                    var values = new Dictionary<string,string> {
-                        {
-                            "secret",
-                            secretKey
-                        },
-                        {
-                            "response",
-                            captchaResponse
-                        }
-                    };
 
-                    var resp = await http.PostAsync(url, new FormUrlEncodedContent(values));
-                    var str = await resp.Content.ReadAsStringAsync();
-                    CaptchaResponse response = JsonConvert.DeserializeObject<CaptchaResponse>(str);
-                    return response.success;
-                }
+                var values = new Dictionary<string, string> {
+                    {
+                        "secret",
+                        secretKey
+                    },
+                    {
+                        "response",
+                        captchaResponse
+                    }
+                };
+                
+
+                var resp = await http.PostAsync(url, new FormUrlEncodedContent(values));
+                var str = await resp.Content.ReadAsStringAsync();
+                CaptchaResponse response = JsonConvert.DeserializeObject<CaptchaResponse>(str);
+                return response.success;
+               
             }
             catch(Exception)
             {
                 return false;
             }
+        }
+
+
+        protected void Dispose(bool disposing)
+        {
+            if(disposing && ! disposed)
+            {
+                http.Dispose();
+            }
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
 
