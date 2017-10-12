@@ -16,8 +16,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort>
-    </IISExpressSSLPort>
+    <IISExpressSSLPort>44337</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -152,6 +151,7 @@
     <Content Include="Content\imgs\projects\hr_icon.png" />
     <Content Include="Content\imgs\projects\info.png" />
     <Content Include="Content\imgs\projects\portrait.jpg" />
+    <Content Include="Content\imgs\projects\search_icon.png" />
     <Content Include="Content\imgs\projects\sharepoint.png" />
     <Content Include="Content\imgs\projects\SocialWorkHandHeart.png" />
     <Content Include="Content\loaders\808.gif" />

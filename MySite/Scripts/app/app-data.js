@@ -144,7 +144,27 @@ my.projects = {
         link: [{ title: 'FileBackup', url: 'https://github.com/brentkuz/file-backup' }, { title: 'Windows Service', url: 'https://github.com/brentkuz/file-backup' }],
 
         request: false
+    },
+
+    rs: {
+        title: "Resume Search (in progress)",
+
+        role: "Everything",
+
+        tech: "ASP.NET MVC, jQuery, Bootstrap",
+
+        overview: 
+            "<ul>"
+            + "<li>A personal project where I'm developing a web app that will help match job candidates to job listings based on a resume uploaded by the candidate.</li>"
+            + "<li>Using natural language processing techniques (e.g. tokenization, stemming) to idenitify keywords.</li>"
+            + "<li>Built to consume various job listing REST APIs. Currently consuming Github's API.</li>"
+            + "</ul>",
+
+        link: [{ title: 'ResumeSearch', url: 'https://github.com/brentkuz/keyword-search' }],
+
+        request: false
     }
+
 
 
 };
